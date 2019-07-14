@@ -5,8 +5,6 @@ https://keeweb.info/
 
 This image supports WebDAV, this makes possible to store/sync password files on the same container.
 
-Note: Over WebDAV, KeeWeb can update files but can't currently create them, the files must exist.
-
 - Alpine-based
 - TLS support
 
