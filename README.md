@@ -1,4 +1,4 @@
-# viossat/keeweb-webdav
+# deatheibon/keeweb-webdav
 
 Free cross-platform password manager compatible with KeePass.
 https://keeweb.info/
