@@ -8,9 +8,9 @@ This image supports WebDAV, this makes possible to store/sync password files on 
 Note: Over WebDAV, KeeWeb can update files but can't currently create them, the files must exist.
 
 - Alpine-based
-- no TLS support, reverse proxy with TLS recommended
+- TLS support
 
-## Usage
+# Usage
 
 First, start KeeWeb (`/my/password-files` must contain the password file):
 ```bash
