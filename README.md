@@ -14,7 +14,14 @@ Note: Over WebDAV, KeeWeb can update files but can't currently create them, the 
 
 First, start KeeWeb (`/my/password-files` must contain the password file):
 ```bash
-docker run -d -p 80:80 -e WEBDAV_USERNAME=webdav -e WEBDAV_PASSWORD=secret -v /my/password-files:/var/www/html/webdav viossat/keeweb-webdav
+docker run -d -p 80:80 -e WEBDAV_USERNAME=webdav -e WEBDAV_PASSWORD=secret -v /my/password-files:/var/www/html/webdav deatheibon/keeweb-webdav
+```
+
+## SSL
+
+Using own sll certificate:
+```bash
+docker run -d -p 80:80 -e WEBDAV_USERNAME=webdav -e WEBDAV_PASSWORD=secret -v /my/password-files:/var/www/html/webdav  -v my/certificate/file:etc/lighttpd/certs:ro deatheibon/keeweb-webdav
 ```
 
 Then, go to KeeWeb through your browser, click on `More`, click on `WebDAV` and enter your configuration:
