@@ -19,7 +19,7 @@ docker run -d -p 80:80 -e WEBDAV_USERNAME=webdav -e WEBDAV_PASSWORD=secret -v /m
 
 ## SSL
 
-Using own sll certificate:
+Using own ssl certificate:
 ```bash
 docker run -d -p 80:80 -e WEBDAV_USERNAME=webdav -e WEBDAV_PASSWORD=secret -v /my/password-files:/var/www/html/webdav  -v my/certificate/file:etc/lighttpd/certs:ro deatheibon/keeweb-webdav
 ```
