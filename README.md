@@ -12,14 +12,14 @@ This image supports WebDAV, this makes possible to store/sync password files on 
 
 First, start KeeWeb (`/my/password-files` must contain the password file):
 ```bash
-docker run -d -p 443:443 -e WEBDAV_USERNAME=webdav -e WEBDAV_PASSWORD=secret -v /my/password-files:/var/www/html/webdav deatheibon/keeweb-webdav
+docker run -d -p 443:443 -e WEBDAV_USERNAME=webdav -e WEBDAV_PASSWORD=secret -v /my/password-files:/var/www/html/webdav deatheibon/keeweb-ssldav
 ```
 
 ## SSL
 
 Using own ssl certificate:
 ```bash
-docker run -d -p 443:443 -e WEBDAV_USERNAME=webdav -e WEBDAV_PASSWORD=secret -v /my/password-files:/var/www/html/webdav -v /my/certificate/file:/etc/lighttpd/certs/lighttpd.pem:ro deatheibon/keeweb-webdav
+docker run -d -p 443:443 -e WEBDAV_USERNAME=webdav -e WEBDAV_PASSWORD=secret -v /my/password-files:/var/www/html/webdav -v /my/certificate/file:/etc/lighttpd/certs/lighttpd.pem:ro deatheibon/keeweb-ssldav
 ```
 
 Then, go to KeeWeb through your browser, click on `More`, click on `WebDAV` and enter your configuration:
